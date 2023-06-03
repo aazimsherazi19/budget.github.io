@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Budget_Tracker</title>
+</head>
+<body>
+    <div class="header">
+    <h1>Budget <span>Tracker</span></h1>
+</div>
+<div class="main">
+<div class="text">
+    <h2>Welcome!</h2>
+    <p>Our free budget calculator will help you to know exactly where your money is being spent, and how much you've got coming in. Knowing how to manage a budget - keep track of where every Rupee is being spent - is a great first step to starting your savings, getting out of debt or preparing for retirement. Our free Budget_Tracker can help. <br>
+
+        We'll give you:
+        <ul>
+        
+    <li> a place to record all your spending, so you won't forget anything</li>
+    <li> a breakdown of your finances by category</li>
+    <li> personalised tips when you're all finished.</li>
+        </ul>
+        </p>
+         
+      </div>
+<div class="working">
+  <h2>Here! You Can Start Your Budget Planning</h2>
+  <div id="budgetSection">
+    <h2>Monthly Budget</h2>
+    <p id="monthlyBudget"></p>
+    <button id="add-budget" onclick="showBudgetPopup()">Add Budget</button>
+  </div>
+
+  <div id="expenseSection">
+    <h2>Add Expense</h2>
+    <input type="text" class="input-bar" id="expenseDescription" placeholder="Expense Description">
+    <input type="number" class="input-bar" id="expenseAmount" placeholder="Expense Amount">
+    <input type="date" class="input-bar" id="expenseDate">
+    <button id="add-expense" onclick="addExpense()">Add Expense</button>
+  </div>
+
+  <div id="dataSection">
+    <h2>Expense List</h2>
+    <table id="expenseTable">
+      <tr>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </table>
+    <h3>Remaining Budget: <span id="remainingBudget"></span></h3>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Enter Monthly Budget</h2>
+      <input type="number" id="budgetAmount" placeholder="Enter monthly budget">
+      <br><br>
+      <button class="button" onclick="saveBudget()">Save</button>
+      <button class="button cancel" onclick="hidePopup()">Cancel</button>
+    </div>
+  </div>
+</div>
+</div>
+
+  
+</body>
+</html>
+
